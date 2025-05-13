@@ -74,7 +74,7 @@ function CheckInCheckOut() {
       <button onClick={() => handleCheckInOut('checkout')}>Check Out</button>
 
       {username === 'admin' && (
-        <button onClick={() => navigate('/admin')}>Go to Admin</button>
+        <button onClick={() => navigate('/admin')}>Go to Admin page</button>
       )}
     </div>
   );

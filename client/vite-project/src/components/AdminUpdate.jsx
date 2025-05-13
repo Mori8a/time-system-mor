@@ -39,7 +39,7 @@ function AdminUpdate() {
 
   return (
     <div>
-      <h2>Admin - Edit & change Logs</h2>
+      <h2>Admin - Edit&change Logs</h2>
 
       <ul>
         {allLogs.length === 0 && <p>No logs found</p>}

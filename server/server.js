@@ -14,7 +14,7 @@ const user2 = { username: 'user2', password: 'password2' };
 
 const filejson = 'logtimesforusers.json';
 
-//  משתנה גלובלי
+// global variable
 let logTimes = [];
 
 async function fileLogTimes() {
@@ -50,7 +50,7 @@ app.post('/login', (req, res) => {
   ) {
     res.json({ success: true });
   } else {
-    console.log('Login failed');
+    console.log('Login was failed');
     res.json({ success: false, message: 'Invalid username or password' });
   }
 });
@@ -61,7 +61,7 @@ async function fetchToAPI() {
     const response = await axios.get('https://timeapi.io/api/time/current/zone?timeZone=Europe%2FBerlin');
     return response.data;
   } catch (error) {
-    console.error('Error fetching time:', error.message);
+    console.error('Error fetch the time:', error.message);
     return { error: 'There is a problem with the time' };
   }
 }
@@ -108,7 +108,7 @@ app.post('/checkout', async (req, res) => {
 
   updateTimeLog(username, 'exit', timeData.time, timeData.date);
   saveLogs(); 
-  res.json({ message: 'Successfully checked out at: ' + timeData.time });
+  res.json({ message: 'Successfully checkedout at: ' + timeData.time });
 });
 
 // ---------------------- Get Logs ----------------------
